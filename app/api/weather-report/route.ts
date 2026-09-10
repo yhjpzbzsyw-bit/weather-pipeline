@@ -64,7 +64,7 @@ export async function GET() {
     });
   } catch (error) {
     return NextResponse.json(
-      { erreur: `Erreur dans le pipeline : ${error.message}` },
+      { erreur: `Erreur dans le pipeline : ${String(error)}` },
       { status: 500 }
     );
   }
